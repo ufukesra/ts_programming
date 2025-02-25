@@ -1,8 +1,13 @@
-class Employee{
+export class Employee{
     public employeeName: string;
     public employeeAge:number;
     public employeeSalary: number;
+    public static isEmployed:boolean;
 
+
+    static{
+        this.isEmployed=true;
+    }
     constructor(name:string, age:number, salary:number){
         this.employeeName=name;
         this.employeeAge=age;  
@@ -16,4 +21,8 @@ class Employee{
     public static payTaxes(): void{
         console.log("Employee must pay taxes");
     }
+}
+
+export function greetings():void{
+    console.log("Hello World!");
 }
